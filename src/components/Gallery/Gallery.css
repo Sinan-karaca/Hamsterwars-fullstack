@@ -16,14 +16,17 @@
 figure {
     display: flex;
     flex-flow: column;
+    align-items: center;
     padding: 5px;
     max-width: 20vw;
     margin: auto;
+    cursor: pointer;
 }
 
 img {
     max-width: 15vw;
     max-height: 18vh;
+    cursor: pointer;
 }
 
 figcaption {
@@ -65,7 +68,9 @@ button {
     margin: auto;
     margin-bottom: 3rem;
 }
-
-span {
+.info {
     color: whitesmoke;
+    height: 2.938rem;
+    display: flex;
+    justify-content: center;
 }

@@ -95,14 +95,11 @@ const NewHamster = () => {
             console.log(stringfy);
             if (name && loves && favFood && imgName && !isNaN(age)) {
                 alert("Your hamster have been added!");
-                await fetch(
-                    "https://hamsterwars-sinan.herokuapp.com/hamsters/",
-                    {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: stringfy,
-                    }
-                );
+                await fetch("/hamsters/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: stringfy,
+                });
             }
         } else if (validName === false) {
             alert("You filled the name incorrectly");
