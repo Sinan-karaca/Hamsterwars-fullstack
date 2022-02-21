@@ -19,7 +19,6 @@ const Match = (trigger) => {
     useEffect(() => {
         const getHamsters = async () => {
             let firstHamster = await fetchHamster();
-            console.log("min farsa");
             console.log(firstHamster);
             let secondHamster;
             let secondHamsterFound = false;
@@ -86,7 +85,10 @@ const Match = (trigger) => {
                     }),
                 };
 
-                await fetch("/matches/", requestOptions);
+                await fetch(
+                    "/matches/",
+                    requestOptions
+                );
             };
 
             const winnerUpdate = async () => {
